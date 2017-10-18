@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Order</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orde.each do |q| %>
+      <tr>
+        <td><%= q.question %></td>
+       <td><%= q.order %></td>
+    <% end %>
+  </tbody>
+</table>

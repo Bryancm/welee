@@ -1,6 +1,16 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
+
+#ordenar preguntas
+  def orderQuestions
+    @orde = Question.order(:order)
+    respond_to do |format|
+    format.html 
+    format.json { render json: @order }
+    end
+  end
+
   # GET /questions
   # GET /questions.json
   def index
@@ -24,6 +34,7 @@ class QuestionsController < ApplicationController
   # POST /questions
   # POST /questions.json
   def create
+    #se agrega una pregunta ordenamente
     @question = Question.new(question_params)
     order = Question.order(:order)
 
@@ -48,7 +59,7 @@ class QuestionsController < ApplicationController
   # PATCH/PUT /questions/1
   # PATCH/PUT /questions/1.json
   def update
-
+      #se intercambian los valores del orden cuando se edita el orden de una pregunta
       o = Question.where(order: question_params[:order]).update(order: @question.order)
     
 

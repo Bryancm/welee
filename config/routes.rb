@@ -27,6 +27,8 @@ get '/articlecats/:id/showArticlesCat' => 'articlecats#showArticlesCat', as: 'sh
 
 get '/articles/:id/articleRecommendation' => 'articles#articleRecommendation', as: 'articleRecommendation'
 
+get '/orderQuestions' => 'questions#orderQuestions', as: 'orderQuestions'
+
 
 
 # se agrega esta linea para que siempre lo mande al login cado no esté resgistrado
