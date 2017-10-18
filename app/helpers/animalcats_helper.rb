@@ -1,0 +1,2 @@
+module AnimalcatsHelper
+end

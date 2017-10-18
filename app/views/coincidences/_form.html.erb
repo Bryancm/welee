@@ -1,0 +1,27 @@
+<%= form_with(model: coincidence, local: true) do |form| %>
+  <% if coincidence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(coincidence.errors.count, "error") %> prohibited this coincidence from being saved:</h2>
+
+      <ul>
+      <% coincidence.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :animal_id %>
+    <%= form.number_field :animal_id, id: :coincidence_animal_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :consideration %>
+    <%= form.text_field :consideration, id: :coincidence_consideration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

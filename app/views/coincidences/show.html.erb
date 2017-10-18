@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Animal:</strong>
+  <%= @coincidence.animal_id %>
+</p>
+
+<p>
+  <strong>Consideration:</strong>
+  <%= @coincidence.consideration %>
+</p>
+
+<%= link_to 'Edit', edit_coincidence_path(@coincidence) %> |
+<%= link_to 'Back', coincidences_path %>

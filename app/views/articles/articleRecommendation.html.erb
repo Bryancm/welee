@@ -1,0 +1,30 @@
+<h1>Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Animal</th>
+      <th>Articlecat</th>
+      <th>Active</th>
+      <th>Photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles_for_animal.each do |a| %>
+      <tr>
+        <td><%= a.name %></td>
+        <td><%= a.description %></td>
+        <td><%= a.price %></td>
+        <td><%= a.animal_id %></td>
+        <td><%= a.articlecat_id %></td>
+        <td><%= a.active %></td>
+        <td><%= a.photo %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

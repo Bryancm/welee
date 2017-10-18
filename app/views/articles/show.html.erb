@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @article.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @article.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @article.price %>
+</p>
+
+<p>
+  <strong>Animal:</strong>
+  <%= @article.animal_id %>
+</p>
+
+<p>
+  <strong>Articlecat:</strong>
+  <%= @article.articlecat_id %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @article.active %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @article.photo %>
+</p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

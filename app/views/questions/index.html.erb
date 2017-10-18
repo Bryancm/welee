@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Order</th>
+      <th>Typeans</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.question %></td>
+        <td><%= question.order %></td>
+        <td><%= question.typeans %></td>
+        <td><%= question.active %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>     
+      <th>Order</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% for o in(2..4)%>
+      <tr>
+        <td><%= o %></td>
+        <td><%= o + 1 %></td>
+      </tr>
+      
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question', new_question_path %>

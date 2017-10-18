@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @animalcat.name %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @animalcat.video %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @animalcat.active %>
+</p>
+
+<%= link_to 'Edit', edit_animalcat_path(@animalcat) %> |
+<%= link_to 'Back', animalcats_path %>

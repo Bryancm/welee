@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Phone</th>
+      <th>Typeu</th>
+      <th>Street</th>
+      <th>Exterior number</th>
+      <th>Interior number</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.lastName %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.typeu %></td>
+        <td><%= user.street %></td>
+        <td><%= user.exterior_number %></td>
+        <td><%= user.interior_number %></td>
+        <td><%= user.city %></td>
+        <td><%= user.state %></td>
+        <td><%= user.zip %></td>
+        <td><%= user.email %></td> 
+        <td><%= link_to 'Show', users_admin_path(user)%></td>
+        <td><%= link_to 'Edit', edit_users_admin_path(user) %></td>
+        <td><%= link_to 'Destroy', users_admin_index_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_users_admin_path %>
+<%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link", ) %>

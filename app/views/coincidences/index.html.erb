@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Coincidences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Animal</th>
+      <th>Consideration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coincidences.each do |coincidence| %>
+      <tr>
+        <td><%= coincidence.animal_id %></td>
+        <td><%= coincidence.consideration %></td>
+        <td><%= link_to 'Show', coincidence %></td>
+        <td><%= link_to 'Edit', edit_coincidence_path(coincidence) %></td>
+        <td><%= link_to 'Destroy', coincidence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coincidence', new_coincidence_path %>
