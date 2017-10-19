@@ -55,5 +55,7 @@
   <%= @user.zip %>
 </p>
 
+<%= link_to "Change your password", edit_user_registration_path %>
+
 <%= link_to 'Edit', edit_users_admin_path(@user) %> |
 <%= link_to 'Back', users_admin_index_path %> 
